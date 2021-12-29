@@ -2,14 +2,19 @@ package com.xworkz.gas.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
 
 @Table(name ="gas_table")
 @Entity
 public class GasCylinderEntity {
 	@Id
 	@Column(name = "ID")
+	@GeneratedValue(generator="abc")
+	@GenericGenerator(name="abc",strategy="increment")
 	private int ID;
 	@Column(name = "BRAND")
 	private String BRAND;
@@ -20,9 +25,8 @@ public class GasCylinderEntity {
 	@Column(name = "GAS_TYPE")
 	private String GAS_TYPE;
 	
-	public GasCylinderEntity(int ID,String BRAND,String COLOR,double PRICE,String GAS_TYPE) {
+	public GasCylinderEntity(String BRAND,String COLOR,double PRICE,String GAS_TYPE) {
 		super();
-		this.ID=ID;
 		this.BRAND=BRAND;
 		this.COLOR=COLOR;
 		this.PRICE=PRICE;

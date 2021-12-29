@@ -1,7 +1,6 @@
 package com.xworkz.gas;
 
 import com.xworkz.gas.dao.GasCylinderDAOImpl;
-import com.xworkz.gas.entity.GasCylinderEntity;
 
 public class GasTester {
   public static void main(String[] args) {
@@ -13,7 +12,9 @@ public class GasTester {
 	
 	//gasCylinderDAOImpl.updateGasCylinderEntity();
 	
-	gasCylinderDAOImpl.deleteGasCylinderEntity();
+	//gasCylinderDAOImpl.deleteGasCylinderEntity();
+	
+	gasCylinderDAOImpl.getAllGasCylinderEntites();
 }
 	
 }
